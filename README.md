@@ -10,16 +10,16 @@ npm i @amcharts/amcharts4
 npm i json-server
 Tài liệu tham khảo
 Angular: 
-Angular
-(2261) [100daysOfAngular] Day 1 - Introduction (Vietnamese) - YouTube
-(2261) Lập Trình Thật Kỳ Diệu - YouTube
-anhtricky - StackBlitz
+	https://angular.io/
+	https://www.youtube.com/watch?v=NS6P1fpU77o&list=PLVmX3uPQtp3vXOXUOl8gDIA_43_pmIdFN
+	https://www.youtube.com/channel/UCimfxQScb7TQFLmVgQfbrAA
+	https://stackblitz.com/@anhtricky
 Chart:
-Reference – amCharts 4 Documentation
-	Localstorage:
-Lưu trữ dữ liệu cục bộ - HTML5 Local Storage (viblo.asia)
-	Multi Language:
-		Create Angular 11 MultiLingual Site with NGX Translate i18n Library - positronX.io
+	https://www.amcharts.com/docs/v4/reference/
+Localstorage:
+	https://viblo.asia/p/luu-tru-du-lieu-cuc-bo-html5-local-storage-LzD5dNzeZjY
+Multi Language:
+	https://www.positronx.io/angular-internationalization-i18n-with-ngx-translate-tutorial/
     
     
     Chạy server
