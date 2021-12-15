@@ -25,5 +25,7 @@ Multi Language:
     Chạy server
 Thực hiện lệnh sau bằng cmd ở trong project
  
- 
+ ![image](https://user-images.githubusercontent.com/92264931/146153983-13ee8525-b2ed-4d48-a886-674535d41b96.png)
+![image](https://user-images.githubusercontent.com/92264931/146154007-917032d1-c07a-4e4c-bb7a-bc0134f49177.png)
+
 
