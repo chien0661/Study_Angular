@@ -1,0 +1,31 @@
+<!-- Styles -->
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<style>
+  #chartdiv {
+    width: 100%;
+    height: 400px;
+  }
+ </style>
+
+<div style="background-color: #EBEBEB;padding-bottom: 10px">
+  <span class="form-inline">
+      <select class="form-control" [(ngModel)]="selectValue" (change)="selectData(selectValue)" >
+        <option *ngFor="let item of danhSachNam" [value]="item"
+        >
+          {{ item }}
+        </option>
+      </select>
+    </span>
+  <div id="chartdiv"></div>
+  <div style="padding-left: 15%;">
+    <input type="radio" id="nam" name="tg" value="nam" checked (change)="OnChange()">
+    <label style="margin: 0 20px 0 5px;" for="nam">Năm</label>
+    <input type="radio" id="quy" name="tg" value="quy" (change)="OnChange()">
+    <label style="margin: 0 20px 0 5px;" for="quy">Quý 1</label>
+  </div>
+
+
+</div>

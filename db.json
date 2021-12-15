@@ -1,0 +1,278 @@
+{
+  "user": [
+    {
+      "id": 8,
+      "name": "Đỗ Văn Chiển",
+      "department": "Phòng phát triển",
+      "startDate": "2020-09-24",
+      "skills": [
+        "Spring Boot",
+        "MVC",
+        "Angular"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Lục Văn Ninh",
+      "department": "Phòng giải pháp",
+      "startDate": "2020-12-04",
+      "skills": [
+        "CSS",
+        "Angular",
+        "HTML"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Dương",
+      "department": "Phòng phát triển",
+      "startDate": "2020-12-18",
+      "skills": [
+        "HTML",
+        "CSS",
+        "Angular"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Thái",
+      "department": "Phòng kiểm thử",
+      "startDate": "2020-12-31",
+      "skills": [
+        "Angular",
+        "HTML"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Đạt",
+      "department": "Phòng kỹ thuật công nghệ",
+      "startDate": "2020-12-10",
+      "skills": [
+        "HTML",
+        "CSS",
+        "Angular",
+        "MVC"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Dương",
+      "department": "Phòng kỹ thuật công nghệ",
+      "startDate": "2020-12-04",
+      "skills": [
+        "Spring Boot",
+        "MVC",
+        "Angular",
+        "CSS",
+        "HTML"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "An",
+      "department": "Phòng kỹ thuật công nghệ",
+      "startDate": "2020-12-10",
+      "skills": [
+        "CSS",
+        "Angular"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Chiển",
+      "department": "Phòng kỹ thuật công nghệ",
+      "startDate": "2020-12-10",
+      "skills": [
+        "CSS"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Minh",
+      "department": "Phòng kỹ thuật công nghệ",
+      "startDate": "2020-12-04",
+      "skills": [
+        "MVC",
+        "Spring Boot"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "aa111",
+      "department": "Phòng giải pháp",
+      "startDate": "2021-01-09",
+      "skills": [
+        "CSS"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "a12",
+      "department": "Phòng phát triển",
+      "startDate": "2021-01-07",
+      "skills": [
+        "Spring Boot",
+        "MVC",
+        "CSS",
+        "HTML",
+        "Angular"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Ninh",
+      "department": "Phòng phát triển",
+      "startDate": "2021-01-08",
+      "skills": [
+        "Spring Boot",
+        "HTML"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "rg",
+      "department": "Phòng kỹ thuật công nghệ",
+      "startDate": "2021-01-08",
+      "skills": [
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Chiển test 12",
+      "department": "Phòng phát triển",
+      "startDate": "2021-12-15",
+      "skills": [
+        "Spring Boot",
+        "MVC",
+        "Angular",
+        "CSS",
+        "HTML"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Chiển test",
+      "department": "Phòng phát triển",
+      "startDate": "2021-12-02",
+      "skills": [
+        "CSS"
+      ]
+    }
+  ],
+  "chart": [
+    {
+      "nam": "2019",
+      "dulieu": [
+        {
+          "ten": "Nhà thầu 1",
+          "dulieunam": 40,
+          "Q1": 10,
+          "Q2": 5,
+          "Q3": 20,
+          "Q4": 15
+        },
+        {
+          "ten": "Nhà thầu 2",
+          "dulieunam": 20,
+          "Q1": 21,
+          "Q2": 10,
+          "Q3": 10,
+          "Q4": 10
+        },
+        {
+          "ten": "Nhà thầu 3",
+          "dulieunam": 25,
+          "Q1": 10,
+          "Q2": 16,
+          "Q3": 10,
+          "Q4": 30
+        },
+        {
+          "ten": "Nhà thầu 4",
+          "dulieunam": 61,
+          "Q1": 10,
+          "Q2": 60,
+          "Q3": 5,
+          "Q4": 10
+        },
+        {
+          "ten": "Nhà thầu 5",
+          "dulieunam": 25,
+          "Q1": 10,
+          "Q2": 10,
+          "Q3": 10,
+          "Q4": 10
+        }
+      ]
+    },
+    {
+      "nam": "2020",
+      "dulieu": [
+        {
+          "ten": "Nhà thầu 1",
+          "dulieunam": 30,
+          "Q1": 10,
+          "Q2": 40,
+          "Q3": 10,
+          "Q4": 10
+        },
+        {
+          "ten": "Nhà thầu 2",
+          "dulieunam": 90,
+          "Q1": 10,
+          "Q2": 10,
+          "Q3": 10,
+          "Q4": 10
+        },
+        {
+          "ten": "Nhà thầu 4",
+          "dulieunam": 90,
+          "Q1": 10,
+          "Q2": 10,
+          "Q3": 10,
+          "Q4": 10
+        },
+        {
+          "ten": "Nhà thầu 6",
+          "dulieunam": 120,
+          "Q1": 10,
+          "Q2": 10,
+          "Q3": 10,
+          "Q4": 10
+        }
+      ]
+    },
+    {
+      "nam": "2021",
+      "dulieu": [
+        {
+          "ten": "Nhà thầu 1",
+          "dulieunam": 20,
+          "Q1": 10,
+          "Q2": 20,
+          "Q3": 10,
+          "Q4": 10
+        },
+        {
+          "ten": "Nhà thầu 2",
+          "dulieunam": 20,
+          "Q1": 10,
+          "Q2": 10,
+          "Q3": 10,
+          "Q4": 10
+        },
+        {
+          "ten": "Nhà thầu 4",
+          "dulieunam": 50,
+          "Q1": 19,
+          "Q2": 10,
+          "Q3": 10,
+          "Q4": 10
+        }
+      ]
+    }
+  ]
+}

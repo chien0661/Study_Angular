@@ -1,0 +1,11 @@
+.scroll {
+  top: 10px;
+  left: 100px;
+  height: 300px;
+  width: 200px;
+  border: 1px solid black;
+  position: absolute;
+  overflow-y: auto;
+  overflow-x: auto;
+  white-space: nowrap;
+}

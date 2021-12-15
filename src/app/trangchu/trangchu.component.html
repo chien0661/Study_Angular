@@ -1,0 +1,192 @@
+<div class="ml-12" style="justify-content: center">
+  <br>
+  <div class="row">
+    <div class="col-6">
+      <div class="card-header"><h3>Thông tin nhân viên</h3></div>
+      <div>
+        <div>
+          <div class="card-body ">
+            <div class="content table-full-width  " *ngIf="dataUser.length>0">
+              <div class="relative">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th scope="col" style="width: 10%;z-index: 3000" class="sticky-col first-col ">STT</th>
+                    <th scope="col" style="width: 20%">Nhân viên</th>
+                    <th scope="col" style="width: 20%">Phòng ban</th>
+                    <th scope="col" style="width: 15%">Ngày vào</th>
+                    <th scope="col" style="width: 20%">Kỹ năng</th>
+                    <th scope="col" style="width: 20%">Nhân viên</th>
+                    <th scope="col" style="width: 20%">Phòng ban</th>
+                    <th scope="col" style="width: 15%">Ngày vào</th>
+                    <th scope="col" style="width: 29%;z-index: 1000" class="sticky-col sticky-col-end ">Thao tác</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor=" let data of dataUserPerPage, let i = index">
+                    <td class="sticky-col first-col "
+                        style="z-index: 1000">  {{itemPerPage * (currentPage - 1) + i + 1}}</td>
+                    <td scope="col">
+                      <div *ngIf="data.id == filterModel.id && sua == true">
+                        <form [formGroup]="userChangeForm">
+                          <input class="form-control"
+                                 formControlName="name"
+                                 [value]="filterModel.name"
+                                 [(ngModel)]="filterModel.name"
+                                 [ngClass]="{'is-invalid':submitted && userChangeForm?.get('name')?.invalid }">
+                          <span class="invalid-feedback">Tên nhân viên không được bỏ trống</span>
+                        </form>
+                      </div>
+                      <div *ngIf="data?.id != filterModel.id || sua == false">{{data?.name}}</div>
+                    </td>
+
+                    <!--          Combobox-->
+                    <td scope="col">
+                      <div *ngIf="data?.id == filterModel.id && sua == true" style="position: relative">
+                        <form [formGroup]="userChangeForm">
+                          <input class="form-control" type="button" (click)="onClickDepartment()"
+                                 style="background: none;"
+                                 formControlName="department" [value]="selectDepartment" [(ngModel)]="selectDepartment"
+                                 [ngClass]="{'is-invalid':submitted && userChangeForm?.get('department')?.invalid }">
+                          <span class="invalid-feedback">Tên phòng ban không được bỏ trống</span>
+                          <div style="position: absolute; background-color: white">
+                            <div [hidden]="showDepartment" *ngFor="let department of departments"
+                                 (click)="getValueDepartment(department.name)">
+                              {{department.name}}
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div *ngIf="data?.id != filterModel.id || sua == false">{{data?.department}}</div>
+                    </td>
+
+                    <!--          Date-->
+                    <td scope="col">
+                      <div *ngIf="data?.id == filterModel.id && sua == true">
+                        <form [formGroup]="userChangeForm">
+                          <input class="form-control" type="date" name="date-input"
+                                 placeholder="date" formControlName="startDate"
+                                 [value]="data.startDate"
+                                 [(ngModel)]="filterModel.startDate"
+                                 [ngClass]="{'is-invalid':submitted && userChangeForm?.get('startDate')?.invalid }">
+                          <span class="invalid-feedback">Ngày vào không được bỏ trống</span>
+                        </form>
+                      </div>
+                      <div *ngIf="data.id != filterModel.id || sua == false">{{data.startDate}}</div>
+                    </td>
+
+                    <!--          MultiSelect-->
+                    <td>
+                      <div *ngIf=" data.id != filterModel.id || sua == false ">
+                        {{data.skills}}
+                      </div>
+                      <div *ngIf=" data.id == filterModel.id && sua == true ">
+
+                        <button class="form-control" (click)="onShowList()" style="background: none">Lựa chọn kỹ năng
+                        </button>
+                        <div>
+                          <div style="position: relative" class="dropdown">
+                            +{{checkedList.length}}
+                            <span *ngFor="let check of checkedList">
+                    {{check}}
+                              <!--                    <button (click)="onChange(item.id)" class="btn btn-danger">X</button>-->
+                  </span>
+                          </div>
+                          <!--                <input type="checkbox" (click)="checkGetAll()"> {{title}}-->
+                          <div hi class="test"
+                               style="position: absolute;z-index: 1000;background-color: white;width: 253px;z-index: 1000">
+                            <div *ngFor="let groupskill of groupSkill">
+                              <div [hidden]="show" class="drop-show">
+                                <input type="checkbox" [(ngModel)]="groupskill.checked"
+                                       (change)="getSelectedValue(groupskill.checked,groupskill.skill)"> {{groupskill.skill}}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>fff</td>
+                    <td>fff</td>
+                    <td>fff</td>
+
+                    <!--          Thao tác-->
+                    <td class="sticky-col sticky-col-end ">
+                      <div *ngIf=" data.id != filterModel.id || sua == false  ">
+                        <button type="button" class="btn btn-primary btn-sm mr-1" [disabled]="disable"
+                                title="Sửa" style="margin-bottom: 4px" (click)="getUserById(data.id)">
+                          Sửa
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm mr-1" title="Xoá" [disabled]="disable"
+                                style="margin-bottom: 4px" (click)="ondeleteById(data.id)">
+                          Xóa
+                        </button>
+                      </div>
+                      <div *ngIf="data.id == filterModel.id && sua == true ">
+                        <button type="button" class="btn btn-success btn-sm mr-1"
+                                title="Lưu"
+                                style="margin-bottom: 4px"
+                                (click)="onSaveUser()">
+                          Lưu
+                        </button>
+                        <button type="button" class="btn btn-primary btn-sm mr-1"
+                                title="Bỏ qua"
+                                style="margin-bottom: 4px"
+                                (click)="onCancel(data.id)">
+                          Bỏ qua
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col">
+                <button class="btn btn-sm btn-primary text-light " [disabled]="disable"
+                        (click)="createUser()">
+                  Thêm
+                  mới
+                </button>
+              </div>
+
+              <!--      Phân trang-->
+              <div class="justify-content-center row">
+                <div style="display: flex;margin-bottom: 10px">
+                  <button class="pagination__item" (click)="setpage(1)">First</button>
+                  <button *ngIf="currentPage>1" class=" pagination__item" (click)="Pre()">Pre</button>
+                  <button *ngIf="currentPage>3 " class=" pagination__item">...</button>
+                  <div *ngFor="let page of allPage" style="display: inline-block">
+                    <button
+                      [ngClass]="currentPage === page ? 'pagination__item pagination__item--active' : 'pagination__item'"
+                      class="pagination__item" (click)="setpage(page)">{{page}}</button>
+                  </div>
+
+                  <button *ngIf="currentPage< pageTotal-3 " class=" pagination__item">...</button>
+                  <button
+                    [ngClass]="currentPage === pageTotal ? 'pagination__item pagination__item--active' : 'pagination__item'"
+                    class=" pagination__item" (click)="setpage(pageTotal)">{{pageTotal}}</button>
+                  <button *ngIf="currentPage<pageTotal" class=" pagination__item" (click)="Next()">Next</button>
+                  <button class=" pagination__item" (click)="setpage(pageTotal)">Last</button>
+                </div>
+              </div>
+            </div>
+
+            <!--            không có data thì hiển thị không có dữ liệu-->
+            <div *ngIf="dataUser.length==0">
+              Không có dữ liệu
+            </div>
+            <!--            <label routerLink="/localStorage"><b><u>Tài sản</u></b></label>-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  close col-6-->
+    <div class="col-6">
+      <app-bootstrap-tab></app-bootstrap-tab>
+    </div>
+  </div>
+</div>
+
+
+

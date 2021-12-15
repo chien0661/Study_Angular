@@ -1,0 +1,135 @@
+.items {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.items__item {
+  margin: 1rem 0;
+  border: 1px solid lightgray;
+}
+
+.items__item--active {
+  background: lightgray;
+}
+
+.items__item:not(.items__item--active) {
+  cursor: pointer;
+}
+
+.items__item a {
+  padding: 0.5rem;
+  display: block;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.pagination__item:not(.pagination__item--disabled) {
+
+  cursor: pointer;
+}
+
+.pagination__item {
+  padding: 0.5rem 1rem;
+  border: 1px solid lightgray;
+}
+
+.pagination__item--active {
+  color: #FFFFFF;
+  background-color: dodgerblue;
+  border: 1px solid;
+}
+
+.pagination__item--first {
+  display: none;
+}
+
+.pagination__item--last {
+  display: none;
+}
+
+.scroll {
+  height: 200px;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  border: 10px solid gainsboro;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    45deg, #3283d9, #79ff6c
+  );
+  border-radius: 3px;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+  left: 5px;
+}
+
+/*.table-responsive  tr .position-td{*/
+/*  position: absolute;*/
+/*  height: 74px;*/
+/*  display: table-cell;*/
+/*  right: 20px;*/
+/*  background-color: #ffffff;*/
+/*}*/
+/*.position-action{*/
+/*  position: absolute;*/
+/*  display: table-cell;*/
+/*  right: 20px;*/
+/*  width: 78px;*/
+/*  height: 74px;*/
+/*  background-color: #ffffff;*/
+/*}*/
+
+
+.relative {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: auto;
+  border: 1px solid black;
+  white-space: nowrap;
+  width: 100%;
+  height: 300px;
+  /* !* overflow: auto; */
+}
+
+.sticky-col {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: white;
+}
+
+.sticky-col-end {
+  background-color: white;
+  right: 0;
+  position: sticky;
+}
+
+.first-col {
+  left: 0px;
+  color: black;
+}
+
+thead th {
+  position: sticky;
+  top: -1px;
+  background-color: white;
+}
+
